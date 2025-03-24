@@ -4,19 +4,17 @@ import java.time.LocalDate;
 
 public class Task {
 
-
     private int id;
     private String name;
     private LocalDate deadline;
     private Status status;
     private String description;
 
-
     public enum Status{
-        COMPLETED, INPROGRESS, CREATED, HALTED
+        COMPLETED, INPROGRESS,CREATED, HALTED
     }
 
-    public Task(int id, String name, LocalDate deadline, Status status, String description) {
+    public Task(int id , String name , LocalDate deadline ,Status status ,String description){
         this.id = id;
         this.name = name;
         this.deadline = deadline;
@@ -32,20 +30,12 @@ public class Task {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public LocalDate getDeadline() {
-        return deadline;
-    }
-
-    public void setDeadline(LocalDate deadline) {
-        this.deadline = deadline;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Status getStatus() {
@@ -56,11 +46,20 @@ public class Task {
         this.status = status;
     }
 
-    public String getDescription() {
-        return description;
+    public LocalDate getDeadline() {
+        return deadline;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDeadline(LocalDate deadline) {
+        this.deadline = deadline;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }

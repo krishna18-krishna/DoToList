@@ -6,7 +6,7 @@ import com.fssa.todolist.model.Task;
 import java.time.LocalDate;
 
 public class TaskValidator {
-    public static void validation(Task task) throws ValidationException{
+    public static void validation(Task task) throws ValidationException {
         if(task == null){
             throw new ValidationException("Task cannot be null");
         }
